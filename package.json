@@ -1,0 +1,20 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "swagger.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node swagger.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "swagger-jsdoc": "^3.0.3",
+    "swagger-ui-express": "^4.0.1"
+  }
+}

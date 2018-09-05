@@ -1,0 +1,40 @@
+paths:
+  /pet/{id}:         # path of the user from your endpoint
+    put:              # endpoint request type (put request)
+      tags:
+        - Pet
+      summary: It updates a pet profile detail
+      produces:
+      - application/json
+      parameters:     # request parameters
+      - name: id      # name of parameter passed
+        in: path      # parameters in the path
+        description: path parameter takes the pet id
+        required: true
+        type: string
+      - in: body
+        name: update pet
+        description: It enables a user to update pet profile
+        required: false
+        schema:
+          $ref: '#/definitions/updatePet'
+      responses:
+        200:
+          description: An object with a user updated user profile detail
+        401:
+          description: Unauthorized users
+definitions:        # Schema definition for the request body
+  updatePet:
+    type: object
+    properties:
+      pet:
+        type: object
+        properties:
+          petname:
+            type: string
+          petFavorite:
+            type: string
+          image:
+            type: string
+          password:
+            type: string
